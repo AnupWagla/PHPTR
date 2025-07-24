@@ -1,45 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$page_title = "Portfolio- PHP Project";
+include 'navbar.php';
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/output.css">
-    <title>PHP Project</title>
-</head>
-
-<body class="bg-gray-300">
-    <nav class="flex items-center justify-between bg-gray-800  p-2 shadow-md">
-        <a href="index.php">
-            <img class="h-10 rounded-full " src="./images/logo.png" alt="logo">
-        </a>
-        <div class="">
-            <input
-                class="focus:outline-none focus:ring-2 focus:ring-amber-400 p-1 w-80 text-center border-2 rounded-2xl text-amber-300 bg-white"
-                type="text" placeholder="Search here">
-            <button class="focus:outline-none focus:ring-1 border-2 rounded-full text-amber-300"
-                type="submit">🔍</button>
-        </div>
-        <div class=" flex gap-4">
-            <a class=" border-2 rounded-3xl p-1 text-amber-300 hover:p-1 hover:text-amber-400 hover:scale-130 duration-200 w-20 text-center"
-                href="login.php">Log in</a>
-            <a class=" border-2 rounded-3xl p-1 text-amber-300 hover:p-1 hover:text-amber-400 hover:scale-130 duration-200 w-20 text-center"
-                href="signup.php">Sign up</a>
-        </div>
-    </nav>
-    <div class="flex h-screen">
-        <div class="h-full p-5 bg-gray-700">
-            <h1 class="pb-5  font-bold">Menu</h1>
-             <ul class="flex flex-col gap-8  ">
-                <li><a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="index.php">Home</a></li>
-                <li><a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="portfolio.php">Portfolio</a></li>
-                <li><a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="contact.php">Contact</a></li>
-                <li><a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="blog.php">Blog</a></li>
-            </ul>
-        </div>
+    <div class="flex-1 p-10 text-left overflow-y-auto bg-gray-100">
+      <h2 class="text-3xl font-bold text-amber-400 mb-4 border-2 flex  justify-center text-shadow-black">Hi, I'm Anup</h2>
+      <p class="mb-6 text-gray-700 flex  justify-center">Beginner Web Designer</p>
       
-        </div>
-    </div>
-</body>
+      <h3 class="text-2xl font-semibold text-amber-500 mb-3">Skills</h3>
+      <ul class="list-disc ml-5 text-gray-700">
+        <li>HTML5 - 70%</li>
+        <li>CSS - 50%</li>
+        <li>Tailwind-CSS - 50%</li>
+      </ul>
 
+      <h3 class="text-2xl font-semibold text-amber-500 mt-8 mb-3">Recent Work</h3>
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <img src="./screenshot/offical.png" alt="Work 1" class="rounded shadow w-40">
+        <img src="./screenshot/offical1.png" alt="Work 2" class="rounded shadow">
+      </div>
+      </form>
+    </div>
+  </div>
+
+</body>
 </html>

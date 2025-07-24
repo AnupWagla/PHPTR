@@ -1,37 +1,47 @@
 <?php
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "9767661639";  
+$dbname = "hwphp";
 
-if($_SERVER['REQUEST_METHOD'] != 'POST'){
-    header('Location: login.php');
+// Connect to MySQL
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check if connection failed
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if form data exists
+if (!isset($_POST['username'], $_POST['email'], $_POST['password'])) {
+    die("Please fill out the form completely.");
+}
+
+// Collect form data
+$username = $_POST['username'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+// Check if email already exists
+$check = "SELECT * FROM users WHERE email='$email'";
+$result = $conn->query($check);
+
+if ($result->num_rows > 0) {
+    echo "Email already registered. <a href='signup.php'>Try again</a>";
     exit();
 }
 
+// Insert into users table
+$sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
 
-$user_email = $_POST['email'];
-$user_password = $_POST['password'];
-
- 
-$conn = mysqli_connect("localhost", "root", "", "hwphp", "3306");
-
-if($conn == false){
-    echo "Connection Failed";
+if ($conn->query($sql) === TRUE) {
+    // Redirect to login page
+    header("Location: login.php");
+    exit();
 } else {
-    echo "Connection Successful";
+    echo "Error: " . $conn->error;
 }
 
-$query = "SELECT * FROM user WHERE email=? AND password=?";//INSERT INTO `user` (`id`, `email`, `password`, `full_name`, `created_at`) VALUES ('1', 'abc@gmail.com', 'abcde', 'Anup Wagle', current_timestamp());
-$mysql_stmt =  mysqli_prepare($conn,  $query);
-mysqli_stmt_bind_param($mysql_stmt,'ss', $user_email, $user_password);
-mysqli_stmt_execute($mysql_stmt);
-$mysql_result=  mysqli_stmt_get_result($mysql_stmt);
-$data =  mysqli_fetch_assoc($mysql_result);
-
-
-
-if($data) {
-
-    session_start();
-    $_SESSION['is_loggedin'] = true;
-    header("Location: dashboard.php");
-} else {
-    header("Location: login.php?error=email or password incorrect");
-}
+$conn->close();
+?>
