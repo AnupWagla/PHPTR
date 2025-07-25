@@ -10,8 +10,6 @@ include 'navbar.php';
         <p class="text-gray-800 text-sm font-medium mb-6">📅 Today is: 
             <span class="text-blue-600"><?php echo date("l, F j, Y"); ?></span>
         </p>
-
-        <!-- Contact Form -->
         <form action="contact_submit.php" method="POST"  class="space-y-4">
             <div>
                 <label for="name" class="block text-left font-medium mb-1">Name:</label>
@@ -36,16 +34,12 @@ include 'navbar.php';
                 Submit
             </button>
         </form>
-
-        <!-- Contact Info -->
         <div class="mt-6 text-sm">
             <h2 class="text-xl font-bold mb-3">Contact Info</h2>
             <p>Email: <a href="mailto:kingwagla@gmail.com" class="text-blue-600 hover:text-blue-800">kingwagla@gmail.com</a></p>
             <p>Phone: <a href="tel:+9779767661639" class="text-blue-600 hover:text-blue-800">+977 9767661639</a></p>
             <p>Location: Kalanki, Kathmandu, Nepal</p>
         </div>
-
-        <!-- Social Links -->
         <div class="mt-4">
             <h3 class="font-bold mb-2">Follow Me:</h3>
             <div class="flex justify-center gap-4 text-sm">

@@ -15,7 +15,6 @@ if (session_status() == PHP_SESSION_NONE) {
 </head>
 
 <body class="bg-gray-300 min-h-screen">
-    <!-- Navbar -->
     <nav class="flex items-center justify-between bg-gray-800 p-2 shadow-md">
         <a href="index.php">
             <img class="h-10 rounded-full" src="./images/logo.png" alt="logo">
@@ -38,9 +37,7 @@ if (session_status() == PHP_SESSION_NONE) {
         </div>
     </nav>
 
-    <!-- Main layout container -->
     <div class="flex min-h-screen">
-        <!-- Sidebar -->
         <div class="w-64 bg-gray-700 p-5 flex-shrink-0">
             <h1 class="pb-5 font-bold text-white">Menu</h1>
             <ul class="flex flex-col gap-8">
