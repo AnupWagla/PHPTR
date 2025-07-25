@@ -35,9 +35,11 @@ if ($result && $result->num_rows == 1) {
     }
     exit();
 } else {
-
-    $conn->close();
-    header("Location: login.php?error=notregistered");
-    exit();
+$conn->close();
+echo "<script>
+    alert('Not registered');
+    window.location.href = 'login.php?error=notregistered';
+</script>";
+exit();
 }
 ?>

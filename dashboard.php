@@ -10,12 +10,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || $_SESSION
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - PHP Project</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
+
 <body class="bg-gray-300">
 
     <div class="flex h-screen">
@@ -31,7 +33,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || $_SESSION
                         Dashboard
                     </a>
                 </li>
-    
+                <li>
+                    <a href="contact_dashboard.php"
+                        class="text-white hover:text-black hover:bg-amber-400 hover:rounded-full p-2 transition-all duration-300 block text-center">
+                        Contact_dashboard
+                    </a>
+                </li>
+
                 <li>
                     <a href="logout.php"
                         class="text-white hover:text-black hover:bg-red-400 hover:rounded-full p-2 transition-all duration-300 block text-center">
@@ -40,7 +48,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || $_SESSION
                 </li>
             </ul>
         </div>
-        
+
         <div class="flex-1 p-10 text-center">
             <h1 class="text-3xl font-bold text-amber-500 mb-4">Welcome Back, Admin!</h1>
             <p class="text-xl text-gray-800">Logged in as <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong></p>
@@ -49,4 +57,5 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || $_SESSION
     </div>
 
 </body>
+
 </html>
