@@ -34,9 +34,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || $_SESSION
                     </a>
                 </li>
                 <li>
-                    <a href="contact_dashboard.php"
+                    <a href="logged.php"
                         class="text-white hover:text-black hover:bg-amber-400 hover:rounded-full p-2 transition-all duration-300 block text-center">
-                        Contact_dashboard
+                        Loged Info
                     </a>
                 </li>
 

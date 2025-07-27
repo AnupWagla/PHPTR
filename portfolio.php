@@ -51,18 +51,19 @@ include 'navbar.php';
 
   <section class="mb-8">
     <h3 class="text-2xl font-semibold text-amber-500 mb-3">Tools Used </h3>
-    <ul class="list-disc ml-6 text-gray-700">
-      <li>Visual Studio Code</li>
-      <li>Figma (for basic design layout)</li>
-      <li>XAMPP (PHP local server)</li>
-      <li>Git & GitHub</li>
-    </ul>
+<ul class="list-disc pl-5 space-y-2">
+  <li><a href="https://code.visualstudio.com/" target="_blank" class="text-blue-600 hover:p-2">Visual Studio Code</a></li>
+  <li><a href="https://www.figma.com/downloads/" target="_blank" class="text-blue-600 hover:p-2">Figma (for basic design layout)</a></li>
+  <li><a href="https://www.apachefriends.org/index.html" target="_blank" class="text-blue-600 hover:p-2">XAMPP (PHP local server)</a></li>
+  <li><a href="https://git-scm.com/downloads" target="_blank" class="text-blue-600 hover:p-2">Git</a> & <a href="https://github.com/" target="_blank" class="text-blue-600 hover:p-2">GitHub</a></li>
+</ul>
+
   </section>
 
-  <section>
+  <section class="mt-8">
     <h3 class="text-2xl font-semibold text-amber-500 mb-3">Future Goals</h3>
     <p class="text-gray-700 max-w-3xl">
-      I aim to master full-stack web development by learning JavaScript, React. My long-term goal is to build real-world applications that solve problems and help businesses grow online.
+      I aim to mster...  web development by learning JavaScript, React. My long-term goal is to build real-world applications that solve problems and help businesses grow online.
     </p>
   </section>
 </div>

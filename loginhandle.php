@@ -37,9 +37,10 @@ if ($result && $result->num_rows == 1) {
 } else {
 $conn->close();
 echo "<script>
-    alert('Not registered');
-    window.location.href = 'login.php?error=notregistered';
+    alert('Not registered. Please register first.');
+    window.location.href = 'signup.php?error=notregistered';
 </script>";
 exit();
+
 }
 ?>

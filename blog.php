@@ -10,7 +10,7 @@ include 'navbar.php';
 
     <!-- Post 1 -->
     <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-      <img src="./blogpic/blog1.png" alt="AI Frontier" class="w-30 h-48 object-cover rounded-lg mb-4 transform hover:scale-105 transition duration-300">
+      <img src="./blogpic/blog1.png" alt="AI Frontier" class="w-20 h-48 object-cover rounded-lg mb-4">
       <h2 class="text-2xl font-bold text-gray-800 mb-2">
         Navigating the AI Frontier: Public and Expert Opinions
       </h2>
@@ -24,7 +24,7 @@ include 'navbar.php';
 
     <!-- Post 2 -->
     <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-      <img src="./blogpic/blog2.png" alt="AI Job Displacement" class="w-40 h-48 object-cover rounded-lg mb-4 transform hover:scale-105 transition duration-300">
+      <img src="./blogpic/blog2.png" alt="AI Job Displacement" class="w-40 h-48 object-cover rounded-lg mb-4 ">
       <h2 class="text-2xl font-bold text-gray-800 mb-2">
         AI and Job Displacement: A Looming Challenge
       </h2>
@@ -38,7 +38,7 @@ include 'navbar.php';
 
     <!-- Post 3 -->
     <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-      <img src="./blogpic/blog3.png" alt="Conflicts" class="w-40 h-48 object-cover rounded-lg mb-4 transform hover:scale-105 transition duration-300">
+      <img src="./blogpic/blog3.png" alt="Conflicts" class="w-40 h-48 object-cover rounded-lg mb-4 ">
       <h2 class="text-2xl font-bold text-gray-800 mb-2">
         Geopolitical Flashpoints: Humanitarian Toll of Conflicts
       </h2>
@@ -52,7 +52,7 @@ include 'navbar.php';
 
     <!-- Post 4 -->
     <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-      <img src="./blogpic/blog4.png" alt="AI in Education" class="w-40 h-48 object-cover rounded-lg mb-4 transform hover:scale-105 transition duration-300">
+      <img src="./blogpic/blog4.png" alt="AI in Education" class="w-40 h-48 object-cover rounded-lg mb-4 ">
       <h2 class="text-2xl font-bold text-gray-800 mb-2">
         Empowering Students with AI: Transforming Classrooms
       </h2>

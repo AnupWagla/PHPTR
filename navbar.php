@@ -40,18 +40,25 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="flex min-h-screen">
         <div class="w-64 bg-gray-700 p-5 flex-shrink-0">
             <h1 class="pb-5 font-bold text-white">Menu</h1>
-            <ul class="flex flex-col gap-8">
-                <li>
-                    <a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="index.php">Home</a>
-                </li>
-                <li>
-                    <a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="portfolio.php">Portfolio</a>
-                </li>
-                <li>
-                    <a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="contact.php">Contact</a>
-                </li>
-                <li>
-                    <a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="blog.php">Blog</a>
-                </li>
-            </ul>
+      <ul class="flex flex-col gap-8">
+    <li>
+        <a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="index.php">Home</a>
+    </li>
+    <li>
+        <a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="portfolio.php">Portfolio</a>
+    </li>
+    <li>
+        <a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="contact.php">Contact</a>
+    </li>
+    <li>
+        <a class="text-white hover:text-black hover:border-2 hover:rounded-full hover:p-2 hover:bg-amber-400 transition-all duration-700 ease-in-out" href="blog.php">Blog</a>
+    </li>
+
+    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['role'] === 'admin'): ?>
+    <li>
+        <a class="text-white font-bold hover:text-black hover:border-2 hover:rounded-full hover:p-2  transition-all duration-700 ease-in-out" href="dashboard.php">Admin Pannel</a>
+    </li>
+    <?php endif; ?>
+</ul>
+
         </div>
