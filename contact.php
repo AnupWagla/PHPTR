@@ -1,7 +1,23 @@
+
 <?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.php");
+    exit();
+}
+
+// Show success or error alert
+if (isset($_SESSION['success'])) {
+    echo "<script>alert('" . $_SESSION['success'] . "');</script>";
+
+} elseif (isset($_SESSION['error'])) {
+    echo "<script>alert('" . $_SESSION['error'] . "');</script>";
+}
 $page_title = "Contact - PHP Project";
 include 'navbar.php';
 ?>
+
+
 
 <div class="flex-1 flex items-center justify-center p-4">
     <div class="bg-gray-100 shadow-lg rounded-lg max-w-xl w-full mx-auto text-center p-6">

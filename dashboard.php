@@ -39,13 +39,19 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || $_SESSION
                         Loged Info
                     </a>
                 </li>
-
+                <li>
+                    <a href="message.php"
+                        class="text-white hover:text-black hover:bg-red-400 hover:rounded-full p-2 transition-all duration-300 block text-center">
+                        Message
+                    </a>
+                </li>
                 <li>
                     <a href="logout.php"
                         class="text-white hover:text-black hover:bg-red-400 hover:rounded-full p-2 transition-all duration-300 block text-center">
                         Logout
                     </a>
                 </li>
+
             </ul>
         </div>
 
